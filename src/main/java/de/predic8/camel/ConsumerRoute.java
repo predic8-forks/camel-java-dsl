@@ -12,13 +12,12 @@ public class ConsumerRoute extends RouteBuilder {
                 .id("file-in")
                 .log("Nachricht: ${body}");
 
-        /* Für Teil #6 Camel & ActiveMQ
-           bitte Kommentar entfernen
+
         from("activemq:in")
                 .id("queue-in")
                 .log("Nachricht verarbeitet: ${body}")
                 .to("file:processed");
-        */
+
 
     }
 }
