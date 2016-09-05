@@ -11,6 +11,7 @@
         </packageScan>
     </camelContext>
 
+    <!-- Für Teil #6 Camel und ActiveMQ -->
     <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
         <property name="connectionFactory">
             <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
@@ -22,26 +23,3 @@
     </bean>
 
 </beans>
-
-
-        <!--<bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">-->
-        <!--<property name="connectionFactory">-->
-        <!--<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">-->
-        <!--<property name="brokerURL" value="tcp://localhost:61616"/>-->
-        <!--<property name="userName" value="smx"/>-->
-        <!--<property name="password" value="smx"/>-->
-        <!--</bean>-->
-        <!--</property>-->
-        <!--<property name="transacted" value="false"/>-->
-        <!--&lt;!&ndash;property name="transactionManager" ref="txManager"/&ndash;&gt;-->
-        <!--</bean>-->
-
-        <!--
-        <bean id="txManager" class="org.springframework.jms.connection.JmsTransactionManager">
-            <property name="connectionFactory">
-                <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-                    <property name="brokerURL" value="tcp://localhost:61616"/>
-                </bean>
-            </property>
-        </bean>
-        -->
